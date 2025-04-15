@@ -3,11 +3,11 @@ library(dplyr)
 library(readr)
 
 # Load data
-stage1 <- read_csv("/Users/rishi/Documents/GitHub/exoplanet-search/candidates_after_criteria_1.csv")
-stage2 <- read_csv("/Users/rishi/Documents/GitHub/exoplanet-search/candidates_after_criteria_2.csv")
-stage3 <- read_csv("/Users/rishi/Documents/GitHub/exoplanet-search/candidates_after_criteria_3.csv")
-stage4 <- read_csv("/Users/rishi/Documents/GitHub/exoplanet-search/candidates_after_criteria_4.csv")
-stage5 <- read_csv("/Users/rishi/Documents/GitHub/exoplanet-search/candidates_after_criteria_5.csv")
+stage1 <- read_csv("candidates_after_criteria_1.csv")
+stage2 <- read_csv("andidates_after_criteria_2.csv")
+stage3 <- read_csv("candidates_after_criteria_3.csv")
+stage4 <- read_csv("candidates_after_criteria_4.csv")
+stage5 <- read_csv("candidates_after_criteria_5.csv")
 
 # Add a stage label to each dataset
 stage1$stage <- "1: Flux"
@@ -43,7 +43,7 @@ fig <- plot_ly(
       yaxis = list(title = "Equilibrium Temp (K)"),
       zaxis = list(title = "Insolation Flux")
     ),
-    title = "Filtering Habitable Exoplanets by Criteria"
+    title = "Habitable Exoplanets"
   )
 
 fig
